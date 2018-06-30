@@ -7,6 +7,15 @@
     <title>Prefection Theme</title>
     <?php wp_head(); ?>
 </head>
-<body>
+    <?php
+
+        if( is_front_page() ):
+            $prefection_classes = array('prefection-class','my-class');
+        else:
+            $prefection_classes = array('no-my-class');
+        endif;
+?>
+
+<body <?php body_class($prefection_classes);?>>
  
  <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
