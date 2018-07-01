@@ -55,3 +55,44 @@ add_theme_support('custom-header');
 add_theme_support( 'post-thumbnails');
 
 add_theme_support('post-formats',array('aside','image','video'));
+
+
+
+
+/* 
+    =====================
+        sidebar activate    
+    =====================
+
+*/
+
+function prefection_widget_setup() {
+
+    register_sidebar( 
+        array(
+            'name' => 'Sidebar',
+            'id' => 'sidebar-1',
+            'class' => 'custom',
+            'description' => 'Standard Sidebar',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</aside>",
+            'before_title'  => '<h2 class="widgettitle">',
+            'after_title'   => "</h2>",
+        )
+    );
+
+    
+    register_sidebar( 
+        array(
+            'name' => 'Sidebar-Two',
+            'id' => 'sidebar-2',
+            'class' => 'custom',
+            'description' => 'Secondary Sidebar',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</aside>",
+            'before_title'  => '<h2 class="widgettitle">',
+            'after_title'   => "</h2>",
+        )
+    );
+}
+add_action('widgets_init','prefection_widget_setup');

@@ -14,7 +14,7 @@
         <?php if(has_post_thumbnail()): ?>
 
             <div class="col-xs-12 col-sm-4">
-                <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
+                <div class="img-thumbnail img-responsive"><?php the_post_thumbnail(); ?></div>
 
             </div>
 
