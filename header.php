@@ -19,38 +19,35 @@
 
 <body <?php body_class($prefection_classes);?>>
  
-    <div class="container">
-
-            <div class="row">
-               <div class="col-xs-12">
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                        <?php
-                            
-                            wp_nav_menu(array(
-                                        'theme_location' => 'primary',
-                                        'container' => false,
-                                        'menu-class' => 'navbar-nav mr-auto'
-                                        )
-                                    );
-
-                        ?>
-                    
-                    </div>
-                  </div> 
-                  <!-- /container-fluid -->
-                </nav>
-                    
-               </div>
-            </div>
+<div class="container">
+		
+			<div class="row">
+				
+				<div class="col-xs-12 col-md-12">
+					
+					<nav class="navbar navbar-expand-sm bg-light">
+					  <div class="container-fluid">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					       <a class="navbar-brand" href="#">Prefection Theme</a>
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+						    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <?php 
+                                        wp_nav_menu(array(
+                                            'theme_location' => 'primary',
+                                            'container' => false,
+                                            'menu_class' => 'navbar-nav mr-auto'
+                                            )
+                                        );
+                                    ?>
+						    </div>
+					  </div><!-- /.container-fluid -->
+					</nav>
+				
+				</div>
+				
+			</div>
 
  
  
