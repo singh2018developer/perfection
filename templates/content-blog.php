@@ -1,0 +1,15 @@
+<div class="col-xs-<?php echo $column;?>">
+        <?php if( has_post_thumbnail() ): ?>
+
+        <div class="img-thumbnail">
+            <?php the_post_thumbnail( 'thumbnail' ); ?>
+        </div>
+        
+<?php endif; ?>
+
+<?php the_title( sprintf('<h1 class="entry-title"><a href="">', esc_url( get_permalink() ) ), '</a></h1>' );  ?>
+
+
+<small><?php the_category(' ');  ?></small>
+
+</div>
